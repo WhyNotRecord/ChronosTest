@@ -28,7 +28,7 @@ predictor = TimeSeriesPredictor(
     train_data=train_data,
     hyperparameters={
         "Chronos": [
-            {"model_path": "bolt_small", "fine_tune": True, "ag_args": {"name_suffix": "FineTuned"}},
+            {"model_path": "bolt_small", "fine_tune": True, "fine_tune_lr": 1e-4, "fine_tune_steps": 1000, "ag_args": {"name_suffix": "FineTuned"}},
         ]
     },
     time_limit=60,
